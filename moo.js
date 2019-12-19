@@ -3,6 +3,7 @@
 
 // Make sure to module.exports = your moo() function 
 // and require() it into your index.js.
+const cowsay = require('cowsay');
 
 function moo(words, eyes, tongue) {
     return cowsay.say({text: words, e: eyes, T: tongue});

@@ -37,7 +37,8 @@ const cowsay = require('cowsay');
 // console.log(process.argv[2])
 
 // alternate way
-const words = process.argv.slice(2).join(' ');
+// const words = process.argv.slice(2).join(' ');
+const words = process.argv[4]
 const eyes = process.argv[2];
 const tongue = process.argv[3];
 
@@ -46,7 +47,7 @@ const theCowSaid = cowsay.say({
     e : eyes,
     T : tongue
 })
-console.log(theCowSaid);
+//console.log(theCowSaid);
 
 // Bonus 2: Create a function that wraps cowsay.say()
 // Write a function called moo() that accepts three arguments: text, eyes, and tongue.
@@ -61,3 +62,4 @@ console.log(theCowSaid);
 // console.log(moo(words, eyes, tongue));
 
 const moo = require('./moo');
+console.log(moo(words, eyes, tongue));
